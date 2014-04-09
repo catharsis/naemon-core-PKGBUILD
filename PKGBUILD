@@ -25,10 +25,11 @@ build() {
 	cd "$srcdir/$pkgname-$pkgver"
 	autoreconf -si
 	./configure \
-		--prefix=/usr \
+		--prefix="/usr" \
 		--sysconfdir="/etc/$_name" \
-		--libdir="/usr/lib64/$_name" \
-		--with-pluginsdir="/usr/lib64/$_name/plugins" \
+		--localstatedir="/var" \
+		--libdir="/usr/lib/" \
+		--with-pluginsdir="/usr/lib/$_name/plugins" \
 		--datadir="/var/$_name" \
 		--with-logrotatedir="/etc/logrotate.d" \
 		--with-lockfile="/var/run/$_name/$_name" \

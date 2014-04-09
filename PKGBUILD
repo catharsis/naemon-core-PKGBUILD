@@ -24,6 +24,7 @@ md5sums=('045db0edf45578b426d3b34b0cec1876') #generate with 'makepkg -g'
 build() {
 	cd "$srcdir/$pkgname-$pkgver"
 	autoreconf -si
+	make clean
 	./configure \
 		--prefix="/usr" \
 		--sysconfdir="/etc/$_name" \

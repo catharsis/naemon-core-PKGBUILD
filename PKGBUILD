@@ -9,7 +9,7 @@ url="http://www.naemon.org"
 license=('GPL2')
 depends=('sh')
 makedepends=('gperf')
-checkdepends=()
+checkdepends=('check>=0.9.0')
 optdepends=()
 provides=()
 conflicts=()

@@ -17,7 +17,7 @@ replaces=()
 backup=()
 options=()
 changelog=
-source=(https://github.com/$name/$pkgname/archive/v$pkgver.tar.gz)
+source=(https://github.com/$_name/$pkgname/archive/v$pkgver.tar.gz)
 noextract=()
 md5sums=('045db0edf45578b426d3b34b0cec1876') #generate with 'makepkg -g'
 

@@ -24,7 +24,6 @@ md5sums=('045db0edf45578b426d3b34b0cec1876') #generate with 'makepkg -g'
 build() {
 	cd "$srcdir/$pkgname-$pkgver"
 	autoreconf -si
-	make clean
 	./configure \
 		--prefix="/usr" \
 		--sysconfdir="/etc/$_name" \
@@ -36,6 +35,7 @@ build() {
 		--with-lockfile="/var/run/$_name/$_name" \
 		--with-naemon-user="$_name" \
 		--with-naemon-group="$_name"
+	make clean
 	make
 }
 
